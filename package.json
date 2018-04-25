@@ -1,0 +1,22 @@
+{
+  "name": "stampreader",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "npm run watch & npm run livereload & node_modules/node-static/bin/cli.js --host-address 0.0.0.0 & while sleep 2; do echo -n '.'; done",
+    "watch": "./node_modules/watchify/bin/cmd.js -v -t coffeeify --debug --extension='.coffee' start.coffee -o bundle.js",
+    "livereload": "./node_modules/livereloadify/cli.js ./"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "browserify-shim": "^3.8.14",
+    "coffeeify": "^3.0.1",
+    "livereloadify": "^2.0.0",
+    "node-static": "^0.7.10",
+    "numjs": "^0.15.1",
+    "underscore": "^1.8.3",
+    "watchify": "^3.9.0"
+  }
+}
